@@ -16,7 +16,7 @@ function Notes() {
             <textarea
                 value={newNote}
                 onChange={onChangeHandler}
-                onBlur={addNote}
+                // xxx = {addNote}
             />
             <h4>Notes:</h4>
             <div>
