@@ -15,7 +15,7 @@ type UserPropsType = UserType & {
 function User(props: UserPropsType) {
     return (
         <li>
-            {/*<button onClick={() => props.deleteUser(xxx)}>x</button>*/}
+            <button onClick={() => props.deleteUser(props.id)}>x</button>
             User {props.name}: {props.age} y.o.
         </li>
     )
