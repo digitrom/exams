@@ -4,7 +4,7 @@ import './index.css';
 
 function AuthForm() {
     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-        // xxx
+        e.preventDefault()
         alert()
     }
     return (

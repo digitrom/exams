@@ -1,38 +1,47 @@
-import React, {useState} from "react";
-import ReactDOM from 'react-dom'
+import React, {useState, MouseEvent, ChangeEvent} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
 
-export function UncontrolledRating() {
-    let [on, setOn] = useState(0)
+function Notes() {
+    const [newNote, setNewNote] = useState<string>("")
+    const [notes, setNotes] = useState<Array<string>>([])
+    const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement> )=>
+        setNewNote(e.currentTarget.value)
+    const addNote = () => {
+        setNotes([newNote, ...notes])
+        setNewNote("")
+    }
     return (
         <div>
-            <Star selected={on > 0} on={1} setOn={setOn} />
-            <Star selected={on > 1} on={2} setOn={setOn}/>
-            <Star selected={on > 2} on={3} setOn={setOn}/>
-            <Star selected={on > 3} on={4} setOn={setOn}/>
-            <Star selected={on > 4} on={5} setOn={setOn}/>
+            <textarea
+                value={newNote}
+                onChange={onChangeHandler}
+                onBlur={addNote}
+            />
+            <div>
+                <button
+                    onClick={() => setNotes([])}
+                >Clear notes list</button>
+            </div>
+            <h4>Notes:</h4>
+            <div>
+                {notes.map(n => <p>{n}</p>)}
+            </div>
         </div>
     )
 }
 
-type StarPropsType = {
-    on: number
-    selected: boolean
-    setOn: (value:number) => void
+ReactDOM.render(
+    <Notes/>, document.getElementById('root')
+);
+// Что надо написать вместо ххх,
+// чтобы при клике список заметок очищался?
 
-}
 
-function Star(props: StarPropsType) {
-    const onClickStarHandler = () => props.setOn(props.on)
-    if (props.selected === true) {
-        return <span><b>star</b> </span>
-    } else {
-        return <span>star </span>
-    }
-    return props.selected
-        ? <span onClick={onClickStarHandler}><b>star</b> </span>
-        : <span onClick={onClickStarHandler}>star </span>
-}
 
-ReactDOM.render(<UncontrolledRating/>,
-    document.getElementById('root')
-)
+
+
+
+
+
+

@@ -4,7 +4,7 @@ import './index.css';
 
 function Post() {
     const onClickHandler = (e: MouseEvent<HTMLAnchorElement>) => {
-        // xxx
+        e.preventDefault()
         alert("Летим-бомбим!!!")
     }
     return (
