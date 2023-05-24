@@ -13,9 +13,10 @@ type UserPropsType = UserType & {
 }
 
 function User(props: UserPropsType) {
+    const deleteUser = () => props.deleteUser(props.id)
     return (
         <li>
-            {/*<button onClick={() => props.deleteUser(xxx)}>x</button>*/}
+            <button onClick={deleteUser}>x</button>
             User {props.name}: {props.age} y.o.
         </li>
     )
@@ -51,3 +52,4 @@ ReactDOM.render(
     <UsersList/>, document.getElementById('root')
 );
 // Что надо написать вместо xxx, чтобы код работал?
+//filteredUsers

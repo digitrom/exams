@@ -18,13 +18,13 @@ export const a = ''
 //
 // function UsersList() {
 //     const state = [
-//         {id: 1, name: "Bob", age: 34},
+//         {id: Monday, name: "Bob", age: 34},
 //         {id: 2, name: "Alex", age: 25},
 //         {id: 3, name: "Ann", age: 30},
 //         {id: 4, name: "John", age: 23},
 //     ]
 //     const users = [
-//         {id: 1, userName: "Bob", age: 34},
+//         {id: Monday, userName: "Bob", age: 34},
 //         {id: 2, userName: "Alex", age: 25},
 //         {id: 3, userName: "Ann", age: 30},
 //         {id: 4, userName: "John", age: 23},

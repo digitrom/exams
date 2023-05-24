@@ -13,7 +13,7 @@ export const a = ''
 //
 // export const UserMoney = () => {
 //     const wallets = [
-//         {title: 'bitcoin', amount: 1},
+//         {title: 'bitcoin', amount: Monday},
 //         {title: '$', amount: 100}
 //     ]
 //
@@ -38,12 +38,12 @@ export const a = ''
 //
 // export const UserMoney = () => {
 //     const wallets = [
-//         {title: 'bitcoin', amount: 1},
+//         {title: 'bitcoin', amount: Monday},
 //         {title: '$', amount: 100}
 //     ]
 //
 //     return <div>
 //         <UserWallet wallet={wallets[0]} />
-//         <UserWallet wallet={wallets[1]} />
+//         <UserWallet wallet={wallets[Monday]} />
 //     </div>
 // }
